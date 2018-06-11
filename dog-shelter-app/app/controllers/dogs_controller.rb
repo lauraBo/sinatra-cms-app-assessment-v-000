@@ -11,4 +11,17 @@ end
   redirect to '/dogs/#{@dog.id}'
  end
 
+get '/dogs' do
+  @dogs = Dog.all
+  erb  :'/dogs/index' 
+end
+
+
+get '/dogs/:id' do
+@dog = Dog.find_by_id(params[:id])
+erb :'dogs/show'
+end
+
+
+
 end

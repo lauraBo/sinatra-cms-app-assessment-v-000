@@ -11,8 +11,6 @@ class ApplicationController < Sinatra::Base
     erb :welcome
   end
 
-  get '/dogs' do 
-    erb :'dogs/index' 
-  end 
+
 
 end

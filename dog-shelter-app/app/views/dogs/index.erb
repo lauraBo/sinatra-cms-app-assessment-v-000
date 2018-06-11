@@ -1,0 +1,20 @@
+ #INDEX of dogs (Public Index)     
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>  DOGS AVAILABLE FOR ADOPTION </title>
+  </head>
+<body>
+  <h1> Dogs Available for Adoption : </h1>
+  
+  <% @dogs.each do |dog| %>
+   <P>  <%= dog.name %> </P>
+<a href=“/dogs/<%= @dog.id %>"> </a>   #( DO YOU NEED The @?) 
+
+<a href=“/ "> go back to Welcome Page  </a>   
+
+
+   <% end %>
+  </body>
+</html> 

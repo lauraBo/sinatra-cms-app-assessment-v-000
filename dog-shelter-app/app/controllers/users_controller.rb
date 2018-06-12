@@ -21,7 +21,12 @@ class UsersController < ApplicationController
     redirect '/'
   end
 
-  
+  get '/users/home' do
+    @user = User.find(session[:id])   # FINDS THE CURRENT USER BASED ON THE ID VALUE FROM SESSIONS HASH,     SETS AN INSTANCE VARIABLE TO ACCESS THE CURRENT USER IN THE VIEW PAGE 
+
+    erb :'/users/home'
+  end
+
 
   
   

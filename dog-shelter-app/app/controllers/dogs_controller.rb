@@ -2,9 +2,12 @@ class DogsController < ApplicationController
   
   
   get '/dogs/new' do
+    if logged_in?
  erb :'/dogs/new'
+ else 
+   redirect '/'
 end 
-  
+end  
 
  
  post '/dogs' do 

@@ -35,6 +35,16 @@ class UsersController < ApplicationController
     end 
   end 
   
- 
+  post '/signup' do
+    user = User.new(:username => params[:username], :password => params[:password], :email => params[:email])
+    if user.save
+    session[:id] = user.id
+    redirect '/users/home'
+    else
+    redirect "/"
+   end
+ end
+
+
 end 
 

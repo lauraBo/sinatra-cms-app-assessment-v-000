@@ -1,0 +1,26 @@
+#INDEX list of dogs    (home page for Shelter staff)              
+
+ <!DOCTYPE html> 
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title> User Dog Index</title>
+  </head>
+<body>
+  <h1> <%= @user.username %> 's Dogs </h1>
+  
+  <% @user.dogs.each do |dog|
+  
+ <P>  <%= dog.name %> </P>
+<P>  <%= dog.breed %> </P>
+<P>  <%= dog.age %> </P>
+<P>  <%= dog.shelter %> </P>
+   
+   <% end %>
+
+
+   
+  <a href='/logout'> Logout Here </a>
+
+  </body>
+</html> 

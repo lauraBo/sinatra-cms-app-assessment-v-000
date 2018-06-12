@@ -1,13 +1,13 @@
-#INDEX list of dogs    (home page for Shelter staff)              
+             
 
  <!DOCTYPE html> 
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title> User Dog Index</title>
+    <title> User Home Page</title>
   </head>
 <body>
-  <h1> <%= @user.username %> 's Dogs </h1>
+  <h1> <%= @user.username %>'s Dogs </h1>
   
   <% @user.dogs.each do |dog| %>
   

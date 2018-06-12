@@ -9,10 +9,10 @@
  
 <h1> Meet <%= @dog.name %> </h1>
   
-<P>  <%= dog.name %> </P>
-<P>  <%= dog.breed %> </P>
-<P>  <%= dog.age %> </P>
-<P>  <%= dog.shelter %> </P>
+<P>  <%= @dog.name %> </P>
+<P>  <%= @dog.breed %> </P>
+<P>  <%= @dog.age %> </P>
+<P>  <%= @dog.shelter %> </P>
 
 <form action="/dogs/<%= @dog.id %>/delete" method="post">
 <input type="hidden" name="_method" value="delete">

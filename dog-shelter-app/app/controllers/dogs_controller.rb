@@ -11,11 +11,16 @@ end
 
  
  post '/dogs' do 
+   if !params.empty?
     user = User.find_by_id(session[:user_id])
     @dog = Dog.create(name: params[:name], breed: params[:breed], shelter: params[:shelter], age: params[:age], :user_id => user.id)
-    @dog.save
+    @dog.save 
     redirect "/dogs/#{@dog.id}"
+  else 
+    redirect 'dogs/new'
+  end 
 end 
+
 
 
 get '/dogs' do

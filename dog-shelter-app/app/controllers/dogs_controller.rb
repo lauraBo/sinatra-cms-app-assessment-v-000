@@ -41,7 +41,7 @@ delete '/dogs/:id/delete' do #delete action
   @dog = Dog.find_by_id(params[:id])
   @dog.delete
   redirect to ‘/dogs'
-giend
+end
 
 
 end

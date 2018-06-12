@@ -22,6 +22,9 @@ get '/dogs/:id' do
 erb :'dogs/show'
 end
 
-
+get '/dogs/:id/edit' do  #load edit form
+ @dog = Dog.find_by_id(params[:id])
+ erb :'dogs/edit'
+end
 
 end

@@ -5,11 +5,15 @@ class DogsController < ApplicationController
  erb :'/dogs/new'
 end 
   
-  
-post '/dogs' do
-  @dog = Dog.create(:name => params[:name], :breed => params[:breed], :shelter => params[:shelter] :age => params[:age] )
-  redirect to '/dogs/#{@dog.id}'
- end
+
+ 
+ post '/dogs' do 
+    user = User.find_by_id(session[:user_id])
+    @dog = Dog.create(name: params[:name], breed: params[:breed], shelter: params[:shelter], age: params[:age], :user_id => user.id)
+    @dog.save
+    redirect "/dogs/#{@dog.id}"
+end 
+
 
 get '/dogs' do
   @dogs = Dog.all

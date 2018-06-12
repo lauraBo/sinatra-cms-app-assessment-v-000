@@ -38,13 +38,13 @@ patch '/dogs/:id' do #edit action
   @dog.age = params[:age]
   @dog.shelter = params[:shelter]
   @dog.save
-  redirect to '/dogs/#{@dog.id}'
+  redirect to "/dogs/#{@dog.id}"
 end
 
 delete '/dogs/:id/delete' do #delete action
   @dog = Dog.find_by_id(params[:id])
   @dog.delete
-  redirect to ‘/dogs'
+  redirect to "/dogs"
 end
 
 

@@ -9,12 +9,14 @@
   <h1> Dogs Available for Adoption : </h1>
   
   <% @dogs.each do |dog| %>
-   <P>  <%= dog.name %> </P>
-<a href=“/dogs/<%= @dog.id %>"> </a>   #( DO YOU NEED The @?) 
+   <p>  <%= dog.name %> </P>
+  <P>  <%= dog.breed %> </P>
+  <P>  <%= dog.age %> </P>
+  <P>  <%= dog.shelter %> </P>
+   
+<% end %>
 
-<a href=“/ "> go back to Welcome Page  </a>   
 
+</body>
+</html>
 
-   <% end %>
-  </body>
-</html> 

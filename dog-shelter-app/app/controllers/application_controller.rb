@@ -22,11 +22,13 @@ class ApplicationController < Sinatra::Base
 
     def current_user
        if logged_in?
-          @current_user = User.find_by(id: session[:user_id])
+          @current_user = User.find(session[:user_id])
         end
       end
     end 
+    
+   
   
-  
+ 
 
 end

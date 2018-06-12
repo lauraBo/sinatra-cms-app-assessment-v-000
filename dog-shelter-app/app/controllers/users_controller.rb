@@ -1,7 +1,7 @@
 class UsersController < ApplicationController 
   
-  get '/sessions/login' do
-    erb :'sessions/login'
+  get '/login' do
+    erb :'users/login'
   end
   
   
@@ -16,14 +16,13 @@ class UsersController < ApplicationController
     end
   end
   
-  get '/sessions/logout' do 
+  get '/logout' do 
     session.clear
     redirect '/'
   end
 
   get '/users/home' do
-    @user = User.find(session[:id])   # FINDS THE CURRENT USER BASED ON THE ID VALUE FROM SESSIONS HASH,     SETS AN INSTANCE VARIABLE TO ACCESS THE CURRENT USER IN THE VIEW PAGE 
-
+     @user = User.find(session[:user_id])
     erb :'/users/home'
   end
 
@@ -31,7 +30,7 @@ class UsersController < ApplicationController
     if !logged_in?
       erb :'users/signup'
     else 
-      redirect '/users/home'
+      redirect "/users/home"
     end 
   end 
  

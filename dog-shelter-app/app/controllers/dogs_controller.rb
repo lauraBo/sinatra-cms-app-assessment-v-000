@@ -27,4 +27,14 @@ get '/dogs/:id/edit' do  #load edit form
  erb :'dogs/edit'
 end
 
+patch '/dogs/:id' do #edit action
+ @dog = Dog.find_by_id(params[:id])
+ @dog.name = params[:name]
+ @dog.breed = params[:breed]
+ @dog.age = params[:age]
+ @dog.shelter = params[:shelter]
+ @dog.save
+redirect to '/dogs/#{@dog.id}'
+end
+
 end

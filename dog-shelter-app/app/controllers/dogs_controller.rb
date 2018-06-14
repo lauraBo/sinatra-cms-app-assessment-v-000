@@ -35,9 +35,15 @@ get '/dogs/:id' do
 end
 
 get '/dogs/:id/edit' do  #load edit form
+  if logged_in?
   @dog = Dog.find_by_id(params[:id])
   erb :'dogs/edit'
-end
+else 
+  redirect '/login'
+ end
+end 
+
+
 
 patch '/dogs/:id' do #edit action
   @dog = Dog.find_by_id(params[:id])
@@ -55,6 +61,7 @@ delete '/dogs/:id/delete' do
     @dog = Dog.find_by_id(params[:id])
     if @dog.user_id == current_user.id
     @dog.destroy 
+    redirect '/dogs'
   end 
   elsif !logged_in?
     redirect '/login'

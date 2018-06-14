@@ -49,12 +49,19 @@ patch '/dogs/:id' do #edit action
   redirect to "/dogs/#{@dog.id}"
 end
 
-delete '/dogs/:id/delete' do #delete action
-  @dog = Dog.find_by_id(params[:id])
-  @dog.delete
-  redirect to "/dogs"
-end 
 
+delete '/dogs/:id/delete' do
+  if logged_in?
+    @dog = Dog.find_by_id(params[:id])
+    if @dog.user_id == current_user.id
+    @dog.destroy 
+  end 
+  elsif !logged_in?
+    redirect '/login'
+  else
+    redirect  "/dogs/#{@dog.id}"
+  end 
+end 
 
 
 

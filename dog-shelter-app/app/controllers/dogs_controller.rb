@@ -5,17 +5,17 @@ class DogsController < ApplicationController
     if logged_in?
  erb :'/dogs/new'
  else 
-   redirect '/'
+   redirect '/login'
 end 
 end  
 
  
  post '/dogs' do 
    if !params.empty?
-    user = User.find_by_id(session[:user_id])
-    @dog = Dog.create(name: params[:name], breed: params[:breed], shelter: params[:shelter], age: params[:age], :user_id => user.id)
+    @user = User.find_by_id(session[:user_id])
+    @dog = Dog.create(name: params[:name], breed: params[:breed], shelter: params[:shelter], age: params[:age], :user_id => @user.id)
     @dog.save 
-    redirect "/dogs/#{@dog.id}"
+    erb  :'/users/home'
   else 
     redirect 'dogs/new'
   end 

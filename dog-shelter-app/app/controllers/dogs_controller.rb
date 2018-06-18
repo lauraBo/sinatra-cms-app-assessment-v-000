@@ -1,7 +1,6 @@
 class DogsController < ApplicationController
   
   
-  
   get '/dogs/new' do
     if logged_in?
  erb :'/dogs/new'
@@ -16,8 +15,6 @@ end
     @user = User.find_by_id(session[:user_id])
     @dog = Dog.create(name: params[:name], breed: params[:breed], shelter: params[:shelter], age: params[:age], :user_id => @user.id)
     @dog.save 
-    
-
     erb  :'/users/home'
   else 
     redirect 'dogs/new'
@@ -49,9 +46,7 @@ end
 
 
 patch '/dogs/:id' do #edit action
-  if logged_in?
   @dog = Dog.find_by_id(params[:id])
-  if @dog.user_id == current_user.id
   @dog.name = params[:name]
   @dog.breed = params[:breed]
   @dog.age = params[:age]
@@ -59,23 +54,19 @@ patch '/dogs/:id' do #edit action
   @dog.save
   redirect to "/dogs/#{@dog.id}"
 end
-elsif !logged_in?
-    redirect '/login'
-  else
-    redirect  "/dogs/#{@dog.id}"
-  end 
-end 
-
 
 
 delete '/dogs/:id/delete' do
-  
+  if logged_in?
     @dog = Dog.find_by_id(params[:id])
     if @dog.user_id == current_user.id
     @dog.destroy 
     redirect '/dogs'
+  end 
+  elsif !logged_in?
+    redirect '/login'
   else
-    redirect  '/users/home'
+    redirect  "/dogs/#{@dog.id}"
   end 
 end 
 

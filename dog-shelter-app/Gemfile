@@ -12,7 +12,6 @@ gem 'pry'
 gem 'bcrypt'
 gem "tux"
 gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
-gem 'rack-flash3'
 
 
 group :test do

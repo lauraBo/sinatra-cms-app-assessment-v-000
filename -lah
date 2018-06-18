@@ -1,0 +1,78 @@
+[33mff28062[m testing git [31m(Laura Bodell, 7 hours ago)[m
+[33m9c4887f[m changed dogs edit route so online looged in users can edit [31m(Laura Bodell, 3 days ago)[m
+[33m93f0893[m changed delete route so only logged in users can delete dog [31m(Laura Bodell, 3 days ago)[m
+[33mf6114f7[m changed post dogs route so user is directed to their homepage after creating a new dog [31m(Laura Bodell, 3 days ago)[m
+[33mf8ba5ea[m  refactored post dogs route so params cannot be empty inorderto create new dog [31m(Laura Bodell, 4 days ago)[m
+[33m8e9b20a[m refactored dogs/new route in controller so only a logged in user can visit page [31m(Laura Bodell, 4 days ago)[m
+[33m7b787bc[m changed post login route in Users Controller. cleaned up the login erb view file by changing font size [31m(Laura Bodell, 4 days ago)[m
+[33m0574c12[m changed signup.erb page. cleaned up layout by changing text size and position of links [31m(Laura Bodell, 4 days ago)[m
+[33mff4c4f2[m changed layout of welcome erb page. moved SHELTERSTAFF text to different line [31m(Laura Bodell, 4 days ago)[m
+[33mf7156ed[m changed dogs index erb page. deleted href link and added attributes for each dog. [31m(Laura Bodell, 4 days ago)[m
+[33mb71bad7[m refactored signup route, logout route and login route in Users Controller [31m(Laura Bodell, 5 days ago)[m
+[33m1284bb7[m enabled sessions in application controller [31m(Laura Bodell, 5 days ago)[m
+[33mc12d7b2[m refactored post signup route in users controller [31m(Laura Bodell, 5 days ago)[m
+[33m75c7bc6[m refactored post /dogs route in dogs controller [31m(Laura Bodell, 5 days ago)[m
+[33mde2c50b[m created post signup route in users controller [31m(Laura Bodell, 5 days ago)[m
+[33mf16db48[m created sign up form and home page for shelter staff [31m(Laura Bodell, 5 days ago)[m
+[33mf285ea5[m created log in form for users [31m(Laura Bodell, 5 days ago)[m
+[33m3273e0c[m  deleted users erb view files as not saving when file is closed. decided to close terminal and restart [31m(Laura Bodell, 5 days ago)[m
+[33mf588152[m created show page for logged in users called home.erb [31m(Laura Bodell, 5 days ago)[m
+[33m43a7566[m created get route for user's homepage [31m(Laura Bodell, 5 days ago)[m
+[33m58ad62e[m created helpers methods in application controller for loggingin [31m(Laura Bodell, 5 days ago)[m
+[33m0c39cfa[m added logout route in users controller [31m(Laura Bodell, 5 days ago)[m
+[33m592a4a0[m added login get route and post sessions route to User Controller. Created login form in login erb file. [31m(Laura Bodell, 5 days ago)[m
+[33m97bb872[m created delete form at bottom of show erb file [31m(Laura Bodell, 5 days ago)[m
+[33m87a47b7[m created delete route in dogs controller [31m(Laura Bodell, 5 days ago)[m
+[33m0c58d39[m created patch route for edit dog action [31m(Laura Bodell, 5 days ago)[m
+[33md153fea[m created dog edit form in edit.erb [31m(Laura Bodell, 5 days ago)[m
+[33m77e119b[m  added get /dogs route. created the erb page for dogs index. added the get route to show individual dogs for public view . created the erbviewpage for individual dogs. [31m(Laura Bodell, 5 days ago)[m
+[33m879a7d9[m  added a post route for the new dog form. created index erb page in Dogs view folder [31m(Laura Bodell, 5 days ago)[m
+[33m8b863b6[m added get route for creating a dog. created subdirectories for views for dogs and users [31m(Laura Bodell, 5 days ago)[m
+[33m91b7f96[m added controllers and rack methodOverride to config.ru file [31m(Laura Bodell, 5 days ago)[m
+[33m183b26c[m added 2 new controller files and set up get route for welcome page in application controller [31m(Laura Bodell, 5 days ago)[m
+[33m78be843[m added shelter column to dogs table through migration [31m(Laura Bodell, 5 days ago)[m
+[33m26a96a8[m added seed file [31m(Laura Bodell, 6 days ago)[m
+[33mbc23ff7[m added two model classes of Dog and User [31m(Laura Bodell, 6 days ago)[m
+[33m5ff0236[m  Added two migration files  for Users and Dogs tables [31m(Laura Bodell, 6 days ago)[m
+[33m4396b84[m Merge pull request #23 from learn-co-curriculum/wip-project-clarifications [31m(Jason Decker, 3 months ago)[m
+[33m1c8303f[m Split edit protection requirement into own bullet [31m(Luisa Scavo, 3 months ago)[m
+[33m7afa237[m Clarify project requirements [31m(Luisa Scavo, 3 months ago)[m
+[33mdbc66a5[m Minor correction [31m(Jason Decker, 4 months ago)[m
+[33m5da4f39[m Fix the link for the Sinatra checklist [31m(Corinna Brock, 4 months ago)[m
+[33m301e72b[m Add new checklist for Sinatra project [31m(Corinna Brock, 4 months ago)[m
+[33mf00e42c[m fix typo in requirement 7 [31m(Corinna Brock, 6 months ago)[m
+[33me18df26[m Add attitude standards [31m(Corinna Brock, 6 months ago)[m
+[33mbeb6b51[m Update spec.md Specs [31m(Luke Ghenco, 7 months ago)[m
+[33m9e31c10[m Update requirements [31m(Luke Ghenco, 7 months ago)[m
+[33m5922210[m Merge pull request #14 from Lukeghenco/Lukeghenco-1485651218 [31m(Luke Ghenco, 1 year, 4 months ago)[m
+[33mf872373[m Merge branch 'master' into Lukeghenco-1485651218 [31m(Luke Ghenco, 1 year, 4 months ago)[m
+[33ma4093f3[m update learn instructor [31m(Luke Ghenco, 1 year, 5 months ago)[m
+[33m43a700c[m Merge pull request #11 from Lukeghenco/fix/remove-error-messages [31m(Peter Bell, 1 year, 10 months ago)[m
+[33mb85458f[m removed requirement of error messages [31m(Luke, 1 year, 10 months ago)[m
+[33m51afc46[m Direct outreach to instructor [31m(Peter Bell, 1 year, 10 months ago)[m
+[33m3f2ba88[m Merge pull request #10 from Lukeghenco/patch-3 [31m(Peter Bell, 1 year, 10 months ago)[m
+[33m4be47c4[m Add domains to avoid and recomendations [31m(Luke Ghenco, 1 year, 10 months ago)[m
+[33mbdf85e4[m Merge pull request #9 from aviflombaum/aviflombaum-1468960658 [31m(Avi Flombaum, 1 year, 11 months ago)[m
+[33me8b81b1[m Updated README.md [31m(Avi Flombaum, 1 year, 11 months ago)[m
+[33m61902ba[m Merge pull request #8 from learn-co-curriculum/spec-file [31m(Peter Bell, 1 year, 11 months ago)[m
+[33me586f46[m Removing dependence on example spec file [31m(Peter Bell, 1 year, 11 months ago)[m
+[33meae178d[m First cut of spec file and instructions in the readme [31m(Peter Bell, 1 year, 11 months ago)[m
+[33m6dab6d8[m Changing email for help from support@ to fullstack@ [31m(Peter Bell, 1 year, 11 months ago)[m
+[33mdb7a9ee[m Merge pull request #6 from learn-co-curriculum/refinements [31m(Peter Bell, 2 years ago)[m
+[33m6367102[m Updating the assessment description to better match rubric [31m(Peter Bell, 2 years ago)[m
+[33mf086810[m Fix numbering [31m(Peter Bell, 2 years ago)[m
+[33m66b3a82[m Adding requirement for README as part of the sinatra assessment [31m(Peter Bell, 2 years ago)[m
+[33m1a9db37[m Add more details about the importance of commit history [31m(Peter Bell, 2 years ago)[m
+[33m5f0bdd5[m Grammatical tweaks [31m(Peter Bell, 2 years ago)[m
+[33me393b2c[m Clarified what CRUD means [31m(Peter Bell, 2 years ago)[m
+[33m526c195[m Removed footer [31m(Peter Bell, 2 years ago)[m
+[33me17ee8f[m Removed request that validations be in model [31m(Peter Bell, 2 years ago)[m
+[33mdf49a47[m updated for l-v premium students [31m(AnnJohn, 2 years, 4 months ago)[m
+[33mfd0fcb5[m optimize learn link [processing skip] [31m(Adam Jonas, 2 years, 5 months ago)[m
+[33m0cd2b2f[m Merge pull request #2 from learn-co-curriculum/drewprice-patch-1 [31m(Drew Price, 2 years, 5 months ago)[m
+[33m1ffd5af[m Update readme per new assessment flow. [31m(Drew Price, 2 years, 5 months ago)[m
+[33m14f1afd[m Merge pull request #1 from frankNowinski/frankNowinski-1451935714 [31m(AnnJohn, 2 years, 5 months ago)[m
+[33me81e8e3[m Updated README.md [31m(Frank Nowinski, 2 years, 5 months ago)[m
+[33m88124c5[m Updating assessment for CMS app [31m(Joe Burgess, 2 years, 6 months ago)[m
+[33mca449b2[m Update README.md [31m(Joe Burgess, 2 years, 6 months ago)[m
+[33mda5076e[m initial [31m(aviflombaum, 2 years, 6 months ago)[m

@@ -46,14 +46,20 @@ end
 
 
 patch '/dogs/:id' do #edit action
+  
   @dog = Dog.find_by_id(params[:id])
+  if @dog.user_id == current_user.id
   @dog.name = params[:name]
   @dog.breed = params[:breed]
   @dog.age = params[:age]
   @dog.shelter = params[:shelter]
   @dog.save
-  redirect to "/dogs/#{@dog.id}"
-end
+  redirect  "/dogs/#{@dog.id}"
+else
+    redirect "/login"
+  end 
+end 
+
 
 
 delete '/dogs/:id/delete' do

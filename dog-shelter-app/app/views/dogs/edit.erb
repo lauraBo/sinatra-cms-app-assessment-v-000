@@ -17,15 +17,18 @@ html>
 
   
   <form method="post" action=“/dog/<%=@dog.id%>">
+    
+    
+    
     <input type="hidden" name="_method" value='patch'>
-     <h1>Edit :</h1> <br>
-    <input type="text" id=“name” name=“name”> <br>
+     <h1> EDIT :</h1> <br>
+    <input type="text" id="name" name=“name”> <br>
   <input type="text" id=“breed” name=“breed”> <br>
 <input type="text" id=“age” name=“age”> <br>
 <input type="text" id=“shelter” name=“shelter”> <br>
    <input type="submit" value="submit" id="submit">
    </form>
 
-  <a href="/"> or go back to your list of dogs </a>    #(what is the link?) 
+  <a href="/dogs"> or go back to dogs index  </a>   
   </body>
 </html> 

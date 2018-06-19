@@ -9,11 +9,13 @@
   <h1> Dogs Available for Adoption : </h1>
   
   <% @dogs.each do |dog| %>
-   <p>  <%= dog.name %> </P>
-  <P>  <%= dog.breed %> </P>
-  <P>  <%= dog.age %> </P>
-  <P>  <%= dog.shelter %> </P>
-   
+ <tr> <p>
+  <td> Name:  <%= dog.name %>  </td>
+  <td> Breed:  <%= dog.breed %>  </td>
+  <td>  Age: <%= dog.age %>  </td>
+ <td> Shelter:  <%= dog.shelter %> </td>
+ </p> 
+  </tr> 
 <% end %>
 
 

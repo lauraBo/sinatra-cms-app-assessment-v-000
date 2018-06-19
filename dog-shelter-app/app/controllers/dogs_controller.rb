@@ -11,7 +11,7 @@ end
 
  
  post '/dogs' do 
-   if !params.empty?
+      if !params[:name].empty? && !params[:breed].empty? && !params[:age].empty? && !params[:shelter].empty?
     @user = User.find_by_id(session[:user_id])
     @dog = Dog.create(name: params[:name], breed: params[:breed], shelter: params[:shelter], age: params[:age], :user_id => @user.id)
     @dog.save 

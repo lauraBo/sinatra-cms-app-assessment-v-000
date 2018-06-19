@@ -73,7 +73,7 @@ patch '/dogs/:id' do
 else
     redirect "/dogs/#{@dog.id}/edit"
   end 
-end x
+end 
 
 
 

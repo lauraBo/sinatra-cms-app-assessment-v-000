@@ -16,12 +16,11 @@
 <P>  <%= @dog.shelter %> </P>
 
   
-  <form method="post" action=“/dog/<%=@dog.id%>" >
+  <form method="post" action="/dogs/<%=@dog.id%>">
     
     
-    
-    <input type="hidden" name="_method" value='patch'>
-
+    <input type="hidden" name="_method" value= 'patch'>
+ <input type="hidden" name="_method" value='patch'>
    
    <table>
       <tr>

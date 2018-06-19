@@ -27,6 +27,9 @@ class UsersController < ApplicationController
      @user = User.find(session[:user_id])
     erb :'/users/home'
   end
+  
+  
+  
 
    get '/signup' do
     if !logged_in?

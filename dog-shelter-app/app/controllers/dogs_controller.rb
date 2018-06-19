@@ -49,15 +49,21 @@ end
 
 
 delete '/dogs/:id/delete' do
-  
+    if logged_in?
     @dog = Dog.find_by_id(params[:id])
     if @dog.user_id == current_user.id
     @dog.destroy 
     redirect '/dogs'
-  else
+  end
+   elsif !logged_in?
+    redirect '/login'
+  else 
     redirect  '/users/home'
   end 
 end 
+
+
+
 
 
 patch '/dogs/:id' do 

@@ -5,6 +5,7 @@ class DogsController < ApplicationController
     if logged_in?
  erb :'/dogs/new'
  else 
+   flash[:message] = "You need to log in to your account to view this page."
    redirect '/login'
 end 
 end  
@@ -18,6 +19,7 @@ end
     flash[:message] = "Successfully added new dog!"
     erb  :'/users/home'
   else 
+    flash[:message] = "Invalid. Please try again."
     redirect 'dogs/new'
   end 
 end 
@@ -35,6 +37,7 @@ get '/dogs/:id' do
   @dog = Dog.find_by_id(params[:id])
   erb :'dogs/show'
 else
+   flash[:message] = "You need to log in to view this page."
   redirect '/login'
 end
 end 
@@ -45,6 +48,7 @@ get '/dogs/:id/edit' do  #load edit form
   if @dog.user_id == current_user.id
   erb :'dogs/edit'
 else 
+   flash[:message] = "You do not have permission to edit this listing."
   redirect '/login'
  end
 end 
@@ -57,6 +61,7 @@ delete '/dogs/:id/delete' do
     if @dog.user_id == current_user.id
     @dog.destroy 
   else 
+     flash[:message] = "You do not have permission to delete this listing."
     redirect  '/users/home'
   end 
 end 
@@ -76,6 +81,7 @@ patch '/dogs/:id' do
   @dog.save
   redirect "/dogs/#{@dog.id}"
 else
+    flash[:message] = "Invalid. Please try again."
     redirect "/dogs/#{@dog.id}/edit"
   end 
 end 

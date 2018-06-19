@@ -36,30 +36,15 @@ get '/dogs/:id' do
 end
 
 get '/dogs/:id/edit' do  #load edit form
-  if logged_in?
+
   @dog = Dog.find_by_id(params[:id])
+  if @dog.user_id == current_user.id
   erb :'dogs/edit'
 else 
   redirect '/login'
  end
 end 
 
-
-
-patch '/dogs/:id' do #edit action
-  
-  @dog = Dog.find_by_id(params[:id])
-  if @dog.user_id == current_user.id
-  @dog.name = params[:name]
-  @dog.breed = params[:breed]
-  @dog.age = params[:age]
-  @dog.shelter = params[:shelter]
-  @dog.save
-  redirect  "/dogs/#{@dog.id}"
-else
-    redirect "/login"
-  end 
-end 
 
 
 
@@ -73,6 +58,22 @@ delete '/dogs/:id/delete' do
     redirect  '/users/home'
   end 
 end 
+
+
+patch '/dogs/:id' do 
+  
+  @dog = Dog.find_by_id(params[:id])
+  if !params.empty?
+  @dog.name = params[:name]
+  @dog.breed = params[:breed]
+  @dog.age = params[:age]
+  @dog.shelter = params[:shelter]
+  @dog.save
+  redirect "/dogs/#{@dog.id}"
+else
+    redirect "/dogs/#{@dog.id}/edit"
+  end 
+end x
 
 
 

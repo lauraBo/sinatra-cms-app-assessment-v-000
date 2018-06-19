@@ -63,7 +63,7 @@ end
 patch '/dogs/:id' do 
   
   @dog = Dog.find_by_id(params[:id])
-  if !params.empty?
+  if !params[:name].empty? && !params[:breed].empty? && !params[:age].empty? && !params[:shelter].empty?
   @dog.name = params[:name]
   @dog.breed = params[:breed]
   @dog.age = params[:age]

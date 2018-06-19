@@ -17,6 +17,7 @@ end
   session[:user_id] = user.id
   redirect '/users/home'
   else
+   flash[:message] = "Invalid username or password."
    redirect '/'
     end
   end

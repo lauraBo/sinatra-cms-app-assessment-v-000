@@ -30,10 +30,13 @@ end
 
 
 get '/dogs/:id' do
-  
+  if logged_in?
   @dog = Dog.find_by_id(params[:id])
   erb :'dogs/show'
+else
+  redirect '/login'
 end
+end 
 
 get '/dogs/:id/edit' do  #load edit form
 

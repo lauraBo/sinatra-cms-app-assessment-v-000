@@ -30,6 +30,7 @@ end
 
 
 get '/dogs/:id' do
+  
   @dog = Dog.find_by_id(params[:id])
   erb :'dogs/show'
 end
@@ -63,16 +64,13 @@ end
 
 
 delete '/dogs/:id/delete' do
-  if logged_in?
+  
     @dog = Dog.find_by_id(params[:id])
     if @dog.user_id == current_user.id
     @dog.destroy 
     redirect '/dogs'
-  end 
-  elsif !logged_in?
-    redirect '/login'
   else
-    redirect  "/dogs/#{@dog.id}"
+    redirect  '/users/home'
   end 
 end 
 

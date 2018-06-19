@@ -1,9 +1,14 @@
 class UsersController < ApplicationController 
   
   get '/login' do
+    if logged_in?
+      redirect '/users/home'
+    else 
     erb :'users/login'
   end
+end 
   
+
   
   post '/login' do
    user = User.find_by(:username => params[:username])
@@ -24,9 +29,13 @@ class UsersController < ApplicationController
   end
 
   get '/users/home' do
+    if logged_in?
      @user = User.find(session[:user_id])
     erb :'/users/home'
+  else 
+    redirect '/login'
   end
+end
   
   
   

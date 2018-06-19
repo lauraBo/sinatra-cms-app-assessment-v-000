@@ -47,7 +47,6 @@ end
 
 
 
-
 delete '/dogs/:id/delete' do
   
     @dog = Dog.find_by_id(params[:id])

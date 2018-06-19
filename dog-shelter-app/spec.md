@@ -10,7 +10,7 @@ Specs:
 - [x] Ensure that users can't modify content created by other users ( The Helper methods in ApplicationController use 'session'  to verify user using ID authentification)
 - [x] Ensure that the belongs_to resource has routes for Creating, Reading, Updating and Destroying ( Dogs Controller contains routes for 4 CRUD actions)
 - [x] Include user input validations (Dog class "validates_presence_of :user_id, :breed, :name, :age, :shelter" . User class "validates_presence_of :username, :email" 
-- [ ] Display validation failures to user with error message (example form URL e.g. /posts/new)
+- [x] Display validation failures to user with error message (example form URL e.g. /posts/new) Flash messages are included in route methods to notify user when they do not have access to page or when invalid information is inputted to login to account.
 - [x] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
 
 Confirm

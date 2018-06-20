@@ -60,6 +60,7 @@ delete '/dogs/:id/delete' do
     @dog = Dog.find_by_id(params[:id])
     if @dog.user_id == current_user.id
     @dog.destroy 
+    redirect  '/users/home'
   else 
      flash[:message] = "You do not have permission to delete this listing."
     redirect  '/users/home'
